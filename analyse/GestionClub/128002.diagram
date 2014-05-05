@@ -1,0 +1,154 @@
+format 75
+
+subject 128002 ""
+  xyzwh 179 42 2000 410 933
+classcanvas 128130 class_ref 128002 // Utilisateur
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 53 159 2000
+end
+usecasecanvas 128258 usecase_ref 128002 // Encoder un membre
+  xyzwh 217 87 3005 64 32 label_xy 201 119
+end
+usecasecanvas 128386 usecase_ref 128130 // Affilier un membre
+  xyzwh 356 106 3005 64 32 label_xy 344 138
+end
+usecasecanvas 128642 usecase_ref 128258 // Encoder les salles
+  xyzwh 219 235 3005 64 32 label_xy 207 267
+end
+usecasecanvas 128898 usecase_ref 128386 // Encoder les horaires
+  xyzwh 358 234 3005 64 32 label_xy 340 266
+end
+classcanvas 129410 class_ref 128130 // Database
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 677 170 2000
+end
+usecasecanvas 129538 usecase_ref 128514 // Modifier un classement
+  xyzwh 496 106 3005 64 32 label_xy 473 138
+end
+usecasecanvas 129794 usecase_ref 128642 // Modifier les données d un membre
+  xyzwh 356 48 3011 64 32 label_xy 306 80
+end
+usecasecanvas 130050 usecase_ref 128770 // Modifier les horaires
+  xyzwh 497 237 3005 64 32 label_xy 480 269
+end
+usecasecanvas 130306 usecase_ref 128898 // Lister les membres
+  xyzwh 215 173 3005 64 32 label_xy 202 205
+end
+usecasecanvas 130562 usecase_ref 129026 // Lister les membres par saison
+  xyzwh 362 174 3011 64 32 label_xy 322 206
+end
+usecasecanvas 130818 usecase_ref 129154 // Encoder une competition
+  xyzwh 277 317 3005 64 32 label_xy 250 349
+end
+usecasecanvas 130946 usecase_ref 129282 // Encoder un interclub
+  xyzwh 219 425 3005 64 32 label_xy 202 457
+end
+usecasecanvas 131202 usecase_ref 129410 // Encoder un match de coupe
+  xyzwh 321 399 3005 64 32 label_xy 286 431
+end
+usecasecanvas 131586 usecase_ref 129538 // Modifier le statut d un match
+  xyzwh 428 318 3005 64 32 label_xy 393 350
+end
+usecasecanvas 131842 usecase_ref 129666 // Lister les competitions
+  xyzwh 227 504 3005 64 32 label_xy 206 536
+end
+usecasecanvas 131970 usecase_ref 129794 // Lister les interclubs
+  xyzwh 354 485 3005 64 32 label_xy 339 517
+end
+usecasecanvas 132098 usecase_ref 129922 // Lister les matchs de coupe
+  xyzwh 350 545 3005 64 32 label_xy 317 577
+end
+usecasecanvas 132610 usecase_ref 130050 // Encoder une transaction
+  xyzwh 225 620 3005 64 32 label_xy 198 652
+end
+usecasecanvas 132738 usecase_ref 130178 // Encoder une recette
+  xyzwh 376 625 3005 64 32 label_xy 359 657
+end
+usecasecanvas 132866 usecase_ref 130306 // Encoder une depense
+  xyzwh 371 693 3005 64 32 label_xy 350 725
+end
+usecasecanvas 133890 usecase_ref 130434 // Lister les transactions
+  xyzwh 211 761 3005 64 32 label_xy 190 793
+end
+usecasecanvas 134018 usecase_ref 130562 // Lister les recettes
+  xyzwh 346 768 3005 64 32 label_xy 335 800
+end
+usecasecanvas 134146 usecase_ref 130690 // Lister les depenses
+  xyzwh 348 833 3005 64 32 label_xy 333 865
+end
+usecasecanvas 134530 usecase_ref 130818 // Donner le bilan d une saison
+  xyzwh 471 803 3005 64 32 label_xy 435 835
+end
+simplerelationcanvas 128514 simplerelation_ref 128002
+  from ref 128258 z 3006 to ref 128386
+end
+simplerelationcanvas 129026 simplerelation_ref 128130
+  from ref 128642 z 3006 to ref 128898
+end
+line 129154 ----
+  from ref 128130 z 3006 to ref 128258
+line 129282 ----
+  from ref 128130 z 3006 to ref 128642
+simplerelationcanvas 129666 simplerelation_ref 128258
+  from ref 128386 z 3006 to ref 129538
+end
+simplerelationcanvas 129922 simplerelation_ref 128386
+  from ref 128258 z 3012 to ref 129794
+end
+simplerelationcanvas 130178 simplerelation_ref 128514
+  decenter_begin 561
+  from ref 128898 z 3006 to ref 130050
+end
+line 130434 ----
+  from ref 128130 z 3006 to ref 130306
+simplerelationcanvas 130690 simplerelation_ref 128642
+  from ref 130306 z 3012 to ref 130562
+end
+simplerelationcanvas 131074 simplerelation_ref 128770
+  from ref 130946 z 3006 to ref 130818
+end
+simplerelationcanvas 131330 simplerelation_ref 128898
+  from ref 131202 z 3006 to ref 130818
+end
+line 131458 ----
+  from ref 128130 z 3006 to ref 130818
+simplerelationcanvas 131714 simplerelation_ref 129026
+  from ref 130818 z 3006 to ref 131586
+end
+simplerelationcanvas 132226 simplerelation_ref 129154
+  from ref 131970 z 3006 to ref 131842
+end
+simplerelationcanvas 132354 simplerelation_ref 129282
+  from ref 132098 z 3006 to ref 131842
+end
+line 132482 ----
+  from ref 128130 z 3006 to ref 131842
+simplerelationcanvas 132994 simplerelation_ref 129410
+  from ref 132738 z 3006 to ref 132610
+end
+simplerelationcanvas 133122 simplerelation_ref 129538
+  from ref 132866 z 3006 to ref 132610
+end
+line 133250 ----
+  from ref 128130 z 3006 to ref 132610
+line 133378 ----
+  from ref 128386 z 3006 to point 581 223
+  line 133506 z 3006 to ref 132738
+line 133634 ----
+  from ref 130818 z 3006 to point 560 393
+  line 133762 z 3006 to ref 132866
+simplerelationcanvas 134274 simplerelation_ref 129666
+  from ref 134018 z 3006 to ref 133890
+end
+simplerelationcanvas 134402 simplerelation_ref 129794
+  from ref 134146 z 3006 to ref 133890
+end
+simplerelationcanvas 134658 simplerelation_ref 129922
+  from ref 134018 z 3006 to ref 134530
+end
+simplerelationcanvas 134786 simplerelation_ref 130050
+  from ref 134146 z 3006 to ref 134530
+end
+line 134914 ----
+  from ref 133890 z 3006 to ref 128130
+end

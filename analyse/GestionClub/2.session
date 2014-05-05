@@ -1,0 +1,11 @@
+window_sizes 1362 705 320 960 512 82
+diagrams
+  active  usecasediagram_ref 128002 // DiaUseCaseClub
+    759 411 100 4 0 0
+end
+show_stereotypes
+selected usecaseview_ref 128002 // UseCaseGestionClub
+open
+  usecase_ref 128002 // Encoder un membre
+end
+end
