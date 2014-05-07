@@ -1,7 +1,7 @@
-window_sizes 1362 705 320 960 512 82
+window_sizes 1366 705 320 960 596 35
 diagrams
   active  usecasediagram_ref 128002 // DiaUseCaseClub
-    759 411 100 4 0 0
+    1040 594 100 4 0 0
 end
 show_stereotypes
 selected usecaseview_ref 128002 // UseCaseGestionClub
