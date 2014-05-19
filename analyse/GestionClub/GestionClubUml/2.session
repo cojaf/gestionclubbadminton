@@ -1,0 +1,11 @@
+window_sizes 1280 672 320 960 512 82
+diagrams
+  active  classdiagram_ref 128002 // DiaUml
+    759 411 100 4 0 0
+end
+show_stereotypes
+selected attribute_ref 129026 // telephone
+open
+  class_ref 136450 // Membre
+end
+end

@@ -1,10 +1,7 @@
 window_sizes 1366 705 320 960 596 35
-diagrams
-  active  usecasediagram_ref 128002 // DiaUseCaseClub
-    1040 594 100 4 0 0
-end
 show_stereotypes
-selected usecaseview_ref 128002 // UseCaseGestionClub
+selected 
+package_ref 129 // GestionClub
 open
   usecase_ref 128002 // Encoder un membre
 end
