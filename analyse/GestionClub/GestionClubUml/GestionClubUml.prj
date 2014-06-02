@@ -1,7 +1,8 @@
 format 75
 "GestionClubUml"
-  revision 2
+  revision 7
   modified_by 2 "Frederick"
+  java_root_dir "C:/Users/Frederick/workspace/gestionclubbadminton/src/pojo/"
 
 
   
@@ -32,7 +33,7 @@ format 75
   
   class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white 
   font_size 8
-  diagram_format A4
+  diagram_format A3
 
   image_root_dir ""
 
@@ -54,9 +55,10 @@ format 75
     //activity diagram settings
     package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
     show_infonote default drawing_language default show_stereotype_properties default
+    associated_deployment_view deploymentview_ref 134658 // ClubDeploiement
     classdiagram 128002 "DiaUml"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-      size A4
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A3
     end
 
     class 128002 "Pays"
@@ -70,6 +72,42 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 135554 "id_Pays"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135682 "nom_Pays"
+	unique private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 135810 "code_Pays"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 135298 // <association>
+	relation_ref 135042 // <association>
+      end
     end
 
     class 128130 "Adresse"
@@ -83,6 +121,85 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 137218 "id_Adresse"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137346 "ville"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137474 "rue"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137602 "numero"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137730 "boite"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 135170 // pays (<association>)
+	relation 135042 ----
+	  stereotype "set"
+	  a role_name "pays" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135170 // pays (<association>)
+	  b role_name "adresses" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135298 // <association>
+      end
+
+      classrelation 135426 // membre (<association>)
+	relation 135170 ----
+	  a role_name "membre" multiplicity "1..*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135426 // membre (<association>)
+	  b role_name "adresse" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135554 // adresse (<association>)
+      end
     end
 
     class 128386 "Salle"
@@ -96,6 +213,55 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 137858 "id_Salle"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137986 "nom_Salle"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138114 "nom_Responsable"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 136066 // <association>
+	relation_ref 135426 // <association>
+      end
+
+      classrelation 137474 // sallesR (<association>)
+	relation 136194 ----
+	  stereotype "set"
+	  a role_name "sallesR" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137474 // sallesR (<association>)
+	  b role_name "rencontre" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137602 // rencontre (<association>)
+      end
     end
 
     class 128514 "Entraineur"
@@ -109,6 +275,56 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 138242 "id_Entraineur"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138370 "diplome"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 134658 // <generalisation>
+	relation 134658 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 134658 // <generalisation>
+	  b parent class_ref 142978 // Personne
+      end
+
+      classrelation 136322 // <association>
+	relation_ref 135554 // <association>
+      end
+
+      classrelation 136834 // <association>
+	relation_ref 135810 // <association>
+      end
+
+      classrelation 137218 // operations (<association>)
+	relation 136066 ----
+	  stereotype "set"
+	  a role_name "operations" multiplicity "0..1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137218 // operations (<association>)
+	  b role_name "entraineur" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137346 // entraineur (<association>)
+      end
     end
 
     class 128642 "Entrainement"
@@ -122,6 +338,74 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 135938 "id_Entrainement"
+	unique private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136066 "jour"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136194 "heure_Debut"
+	private explicit_type "date"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136322 "heure_Fin"
+	private explicit_type "date"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 135938 // salles (<association>)
+	relation 135426 ----
+	  stereotype "set"
+	  a role_name "salles" multiplicity "1..*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135938 // salles (<association>)
+	  b role_name "entrainements" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136066 // <association>
+      end
+
+      classrelation 136194 // entraineurs (<association>)
+	relation 135554 ----
+	  stereotype "set"
+	  a role_name "entraineurs" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136194 // entraineurs (<association>)
+	  b role_name "entrainementsE" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136322 // <association>
+      end
     end
 
     class 128770 "Stage"
@@ -135,6 +419,96 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 136450 "id_Stage"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136578 "nom_Stage"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136706 "descriptif"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136834 "heure_Debut"
+	private explicit_type "date"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 136962 "heure_Fin"
+	private explicit_type "date"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 137090 "prix"
+	private explicit_type "double"
+	init_value "0.0d"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 136706 // stages (<association>)
+	relation 135810 ----
+	  stereotype "set"
+	  a role_name "stages" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136706 // stages (<association>)
+	  b role_name "entraineursS" multiplicity "1..*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136834 // <association>
+      end
+
+      classrelation 136962 // operation (<association>)
+	relation 135938 ----
+	  a role_name "operation" multiplicity "0..1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136962 // operation (<association>)
+	  b role_name "stage" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137090 // stage (<association>)
+      end
     end
 
     class 128898 "Operation"
@@ -148,6 +522,84 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 139906 "id_Operation"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140034 "nom_Operation"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140162 "description"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140290 "date"
+	private explicit_type "date"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140418 "montant"
+	private explicit_type "double"
+	init_value "0.0d"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 137090 // stage (<association>)
+	relation_ref 135938 // <association>
+      end
+
+      classrelation 137346 // entraineur (<association>)
+	relation_ref 136066 // <association>
+      end
+
+      classrelation 138626 // <association>
+	relation_ref 136706 // <association>
+      end
+
+      classrelation 138754 // typeOperation (<association>)
+	relation 136834 ----
+	  a role_name "typeOperation" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138754 // typeOperation (<association>)
+	  b role_name "operations" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138882 // operations (<association>)
+      end
     end
 
     class 129026 "TypeOperation"
@@ -161,9 +613,34 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 139138 "id_Type"
+	private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139266 "nom_Type"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 138882 // operations (<association>)
+	relation_ref 136834 // <association>
+      end
     end
 
-    class 129154 "Match"
+    class 129154 "Matchs"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -174,6 +651,50 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 141954 "id_match"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 142082 "type_Match"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 142210 "score"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 139394 // <aggregation>
+	relation_ref 137090 // <aggregation>
+      end
+
+      classrelation 140162 // <association>
+	relation_ref 137474 // <association>
+      end
+
+      classrelation 141186 // <association>
+	relation_ref 137986 // <association>
+      end
     end
 
     class 129282 "Comite"
@@ -187,6 +708,53 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 139394 "id_Comite"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139522 "nom_Comite"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139650 "date_Debut"
+	private explicit_type "date"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139778 "date_Fin"
+	private explicit_type "date"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 135810 // <association>
+	relation_ref 135298 // <association>
+      end
     end
 
     class 129410 "Classement"
@@ -200,6 +768,46 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 143106 "id_Classement"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 143234 "discipline"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 143362 "categorie"
+	private explicit_type "string"
+	init_value " null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 139650 // <association>
+	relation_ref 137218 // <association>
+      end
+
+      classrelation 140930 // <association>
+	relation_ref 137858 // <association>
+      end
     end
 
     class 129538 "Club"
@@ -213,6 +821,40 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 142850 "id_Club"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 142978 "nom_Club"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 140290 // equipe (<association>)
+	relation 137602 ----
+	  stereotype "set"
+	  a role_name "equipe" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 140290 // equipe (<association>)
+	  b role_name "club" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 140418 // club (<association>)
+      end
     end
 
     class 129666 "Cotisation"
@@ -226,6 +868,44 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 138498 "id_Cotisation"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 137858 // <association>
+	relation_ref 136322 // <association>
+      end
+
+      classrelation 138242 // typeCotisation (<association>)
+	relation 136578 ----
+	  a role_name "typeCotisation" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138242 // typeCotisation (<association>)
+	  b role_name "cotisation" multiplicity "0..1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138370 // cotisation (<association>)
+      end
+
+      classrelation 138498 // operation (<association>)
+	relation 136706 ----
+	  a role_name "operation" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138498 // operation (<association>)
+	  b role_name "cotisation" multiplicity "0..1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138626 // <association>
+      end
     end
 
     class 129794 "TypeCotisation"
@@ -239,6 +919,58 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 140546 "id_TypeCotisation"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140674 "nom_TypeCotisation"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140802 "montant"
+	private explicit_type "double"
+	init_value "0.0d"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 137986 // <association>
+	relation 136450 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137986 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 138114 // <association>
+      end
+
+      classrelation 138114 // <association>
+	relation_ref 136450 // <association>
+      end
+
+      classrelation 138370 // cotisation (<association>)
+	relation_ref 136578 // <association>
+      end
     end
 
     class 129922 "Rencontre"
@@ -252,6 +984,91 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
+      attribute 140930 "id_Rencontre"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141058 "type_Rencontre"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141186 "date_Rencontre"
+	private explicit_type "date"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141314 "division"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141442 "resultat"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141570 "commentaires"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 137602 // rencontre (<association>)
+	relation_ref 136194 // <association>
+      end
+
+      classrelation 139266 // <aggregation>
+	relation 137090 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 139266 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 139394 // <aggregation>
+      end
+
+      classrelation 140674 // <association>
+	relation_ref 137730 // <association>
+      end
     end
 
     class 136450 "Membre"
@@ -267,50 +1084,6 @@ ${members}}
       
       attribute 128002 "id_Membre"
 	unique private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 128130 "numero_Membre"
-	private explicit_type "string"
-	init_value "null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 128258 "nom"
-	private explicit_type "string"
-	init_value "null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 128386 "prenom"
-	private explicit_type "string"
-	init_value "null"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 128514 "sexe"
-	private explicit_type "bool"
-	init_value "true"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
@@ -361,6 +1134,525 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+      end
+
+      classrelation 134530 // <generalisation>
+	relation 134530 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 134530 // <generalisation>
+	  b parent class_ref 142978 // Personne
+      end
+
+      classrelation 135554 // adresse (<association>)
+	relation_ref 135170 // <association>
+      end
+
+      classrelation 135682 // comite (<association>)
+	relation 135298 ----
+	  a role_name "comite" multiplicity "0..1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135682 // comite (<association>)
+	  b role_name "membre" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135810 // <association>
+      end
+
+      classrelation 137730 // cotisations (<association>)
+	relation 136322 ----
+	  stereotype "set"
+	  a role_name "cotisations" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137730 // cotisations (<association>)
+	  b role_name "membres" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 137858 // <association>
+      end
+
+      classrelation 139010 // competiteur (<association>)
+	relation 136962 ----
+	  stereotype "set"
+	  a role_name "competiteur" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 139010 // competiteur (<association>)
+	  b role_name "membre" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 139138 // membre (<association>)
+      end
+    end
+
+    class 142978 "Personne"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 138626 "id_Personne"
+	unique protected explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138754 "nom"
+	protected explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138882 "prenom"
+	protected explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139010 "sexe"
+	protected explicit_type "bool"
+	init_value "false"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    class 143106 "Competiteur"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 141698 "id_Competiteur"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141826 "numero_Ligue"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 139138 // membre (<association>)
+	relation_ref 136962 // <association>
+      end
+
+      classrelation 140802 // classements (<association>)
+	relation 137858 ----
+	  stereotype "set"
+	  a role_name "classements" multiplicity "1..*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 140802 // classements (<association>)
+	  b role_name "competiteurs" multiplicity "1..*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 140930 // <association>
+      end
+
+      classrelation 141058 // matchs (<association>)
+	relation 137986 ----
+	  stereotype "set"
+	  a role_name "matchs" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 141058 // matchs (<association>)
+	  b role_name "competiteur" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 141186 // <association>
+      end
+    end
+
+    class 143234 "Adversaire"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 142338 "id_Adversaire"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 142466 "numero_Ligue"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 134786 // <generalisation>
+	relation 134786 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 134786 // <generalisation>
+	  b parent class_ref 142978 // Personne
+      end
+
+      classrelation 139522 // classements (<association>)
+	relation 137218 ----
+	  stereotype "set"
+	  a role_name "classements" multiplicity "1..*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 139522 // classements (<association>)
+	  b role_name "adversaires" multiplicity "1..*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 139650 // <association>
+      end
+
+      classrelation 140034 // matchs (<association>)
+	relation 137474 ----
+	  stereotype "set"
+	  a role_name "matchs" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 140034 // matchs (<association>)
+	  b role_name "adversaires" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 140162 // <association>
+      end
+    end
+
+    class 143362 "Equipe"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 142594 "id_Equipe"
+	unique private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 142722 "nom_Equipe"
+	private explicit_type "string"
+	init_value "null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 140418 // club (<association>)
+	relation_ref 137602 // <association>
+      end
+
+      classrelation 140546 // rencontre (<association>)
+	relation 137730 ----
+	  stereotype "set"
+	  a role_name "rencontre" multiplicity "*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 140546 // rencontre (<association>)
+	  b role_name "equipes" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 140674 // <association>
+      end
+    end
+  end
+
+  deploymentview 134658 "ClubDeploiement"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+    deploymentdiagram 134658 "club"
+      package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+      draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+      size A3
+    end
+
+    artifact 134658 "Pays"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 128002 // Pays
+      end
+    end
+
+    artifact 134786 "Adresse"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 128130 // Adresse
+      end
+    end
+
+    artifact 134914 "Salle"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 128386 // Salle
+      end
+    end
+
+    artifact 135042 "Entraineur"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 128514 // Entraineur
+      end
+    end
+
+    artifact 135170 "Entrainement"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 128642 // Entrainement
+      end
+    end
+
+    artifact 135298 "Stage"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 128770 // Stage
+      end
+    end
+
+    artifact 135426 "Operation"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 128898 // Operation
+      end
+    end
+
+    artifact 135554 "TypeOperation"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 129026 // TypeOperation
+      end
+    end
+
+    artifact 135682 "Match"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 129154 // Matchs
+      end
+    end
+
+    artifact 135810 "Comite"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 129282 // Comite
+      end
+    end
+
+    artifact 135938 "Classement"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 129410 // Classement
+      end
+    end
+
+    artifact 136066 "Club"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 129538 // Club
+      end
+    end
+
+    artifact 136194 "Cotisation"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 129666 // Cotisation
+      end
+    end
+
+    artifact 136322 "TypeCotisation"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 129794 // TypeCotisation
+      end
+    end
+
+    artifact 136450 "Rencontre"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 129922 // Rencontre
+      end
+    end
+
+    artifact 136578 "Membre"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 136450 // Membre
+      end
+    end
+
+    artifact 136706 "Personne"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 142978 // Personne
+      end
+    end
+
+    artifact 136834 "Competiteur"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 143106 // Competiteur
+      end
+    end
+
+    artifact 136962 "Adversaire"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 143234 // Adversaire
+      end
+    end
+
+    artifact 137090 "Equipe"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_classes
+	class_ref 143362 // Equipe
       end
     end
   end

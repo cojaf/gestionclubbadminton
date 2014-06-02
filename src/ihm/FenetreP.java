@@ -3,9 +3,9 @@ package ihm;
 
 import java.awt.BorderLayout;
 
-import outils.Param;
-
 import javax.swing.JFrame;
+
+import outils.Param;
 
 public class FenetreP extends JFrame {
 	private PanelOuest panelOuest = null;

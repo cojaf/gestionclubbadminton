@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Window" id="1" y="-24" width="817" height="625" text="Gestion Club" measuredWidth="817" measuredHeight="625"/>
+  <widgets xsi:type="model:Label" id="4" x="10" y="45" width="105" text="IconClub" measuredWidth="105" measuredHeight="58" textAlignment="Center" icon="image (large)" iconPosition="top">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="5" x="320" y="578" text="Les volants rue du coron 43, 7070 Ville sur Haine" measuredWidth="257" measuredHeight="23" textAlignment="Center">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="6" x="233" y="125" measuredWidth="5" measuredHeight="67">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:Menu" id="7" x="10" y="19" text="&amp;File,&amp;Edit,&amp;View,~&amp;Window~,&amp;Help" measuredWidth="192" measuredHeight="27">
+    <items x="5" y="0" width="28" height="27" text="&amp;File"/>
+    <items x="33" y="0" width="30" height="27" text="&amp;Edit"/>
+    <items x="63" y="0" width="35" height="27" text="&amp;View"/>
+    <items x="98" y="0" width="54" height="27" text="~&amp;Window~"/>
+    <items x="152" y="0" width="35" height="27" text="&amp;Help"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="8" x="170" y="128" text="Nom" measuredWidth="32" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="9" x="408" y="128" text="Prenom" measuredWidth="47" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="10" x="252" y="128" text="Text fieldNom" measuredWidth="85" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="11" x="485" y="128" text="Text fieldPrenom" measuredWidth="100" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="12" x="170" y="169" text="Rue" measuredWidth="25" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="13" x="252" y="169" width="123" text="Text fieldRue" measuredWidth="123" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="14" x="408" y="169" text="Numero" measuredWidth="49" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="15" x="485" y="169" text="Text fieldNumero" measuredWidth="102" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="16" x="624" y="169" text="Boite" measuredWidth="32" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="17" x="663" y="169" width="100" text="Text fieldBoite" measuredWidth="100" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="18" x="170" y="216" text="Code Postal" measuredWidth="68" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="19" x="252" y="216" text="Text fieldCode Postal" measuredWidth="121" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="20" x="428" y="216" text="Ville" measuredWidth="27" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="21" x="485" y="208" width="100" text="Text fieldVille" measuredWidth="100" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="22" x="624" y="216" text="Pays" measuredWidth="29" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="23" x="663" y="216" width="100" text="Text fieldPays" measuredWidth="100" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="24" x="170" y="277" text="Sexe" measuredWidth="28" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="25" x="250" y="277" text="ComboSexe" measuredWidth="87" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="26" x="400" y="277" text="Date de Naissance" measuredWidth="101" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:DateField" id="27" x="527" y="277" width="137" text="DateNaissanceChooser" measuredWidth="137" measuredHeight="23"/>
+  <widgets xsi:type="model:Group" id="29" x="32" y="125" width="113" height="308" text="GroupBouton" measuredWidth="113" measuredHeight="308">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="30" x="42" y="183" width="79" text="Annuler" measuredWidth="79" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="31" x="42" y="230" width="79" text="Valider" measuredWidth="79" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="32" x="42" y="280" text="Rechercher" measuredWidth="79" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="33" x="42" y="320" width="79" text="Affilier" measuredWidth="79" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="34" x="170" y="328" text="Conjoint" measuredWidth="51" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="35" x="250" y="328" text="TextFielConjoint" measuredWidth="96" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="36" x="170" y="384" text="Courriel" measuredWidth="47" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="37" x="250" y="384" text="Text fieldCourriel" measuredWidth="100" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="38" x="416" y="384" text="Telephone" measuredWidth="61" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="39" x="527" y="384" text="Text fieldTelephone" measuredWidth="114" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="40" x="696" y="304" height="137" text="Cotisation" measuredWidth="100" measuredHeight="137">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="41" x="720" y="328" text="Saison" measuredWidth="58" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="42" x="720" y="371" text="Type" measuredWidth="50" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="43" x="706" y="406" text="OK" measuredWidth="36" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="44" x="745" y="406" text="Annuler" measuredWidth="62" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="47" x="359" y="448" width="282" text="Name,Last\nName,=. Age v,(w:30). Kids,Likes,(align:center). Actions&#xA;Peter,Severin,37,[x],{computer},[Edit] [View]&#xA;Henri,Severin,7,[],{train},[Edit] [View]&#xA;Olga,Severin,62,[x],{note},[Edit] [View]&#xA;" measuredWidth="282" measuredHeight="106" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="48" x="114" y="466" width="124" text="Search" measuredWidth="124" measuredHeight="24"/>
+  <widgets xsi:type="model:Combo" id="49" x="114" y="512" width="116" text="Saisons" measuredWidth="116" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

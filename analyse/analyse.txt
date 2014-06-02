@@ -1,0 +1,97 @@
+Next conversation [right arrow]
+
+    Home
+    Mail
+    News
+    Sports
+    Finance
+    Weather
+    Games
+    Groups
+    Answers
+    Screen
+    Flickr
+    Mobile
+    More
+
+Yahoo Mail Yahoo Mail
+
+	
+
+    Frederick Avatar
+    Frederick
+
+    Help
+
+Press ? for keyboard shortcuts.
+
+
+Examen analyse
+Harmegnies patrice
+To 'Amaury Sébastien''andré julien''Brieuc sculier' and 15 More...
+May 30 at 11:39 AM
+
+Pour rappel
+
+Avant votre passage soit lundi soit mardi
+
+Les consignes
+
+ 
+
+Je demande de me fournir ( et de défendre) un dossier complet permettant d’illustrer
+
+Votre compréhension sur UML2 et MERISE
+
+Donc
+
+a)      Enoncé du projet
+
+b)      Les contraintes du projet
+
+c)      L’existant (recherche sur des projets similaires)
+
+d)      Les besoins du client
+
+e)      Les différents acteurs et leur relation (diagramme usecase)
+
+f)       Les différentes fonctionnalités à prévoir en rapport avec chaque acteur (diagramme usecase) au minimum 1 acteur le plus important pour l’application
+
+g)      Les entités et leurs associations
+soit en commençant par un diagramme UML2 de classes avec illustration des différents symboles UML
+et en créant la modélisation pour la database en synchronisation avec le diagramme de classes
+
+h)       Soit l’inverse
+
+i)        Les schémas doivent être réalisés avec un logiciel spécialisé
+DBMain – Mysql Workbench pour MERISE
+Bouml  - Architect Enterprise pour UML
+nous avons réalisé en fin de module un exercice avec Architecte Enterprise (sparx) avec diagramme de classes UML et réalisation d’un diagramme database type UML2
+ou un autre si langage différent
+
+j)       Sortir le code sql pour Mysql ou sql pour Microsoft SQL Server
+et les différentes classes Java  complètes (ou autres si langage différent)
++ tests
+
+k)      Prévoir une ou +sieurs maquettes pour les IHM en relation avec le ou les useCases
+je serai content avec une maquette bien conçue pour un des UseCases
+utiliser n’importe quel outil pour concevoir votre maquette (il y en a en ligne)
+
+l)       Rapport à remettre pour les archives + les fichiers …
+
+ 
+
+Bref, me montrer que vous savez manipuler les différents logiciels vus au cours
+
+Les schémas doivent être clairs et facilement lisibles …
+
+ 
+
+A+
+
+Bon WE
+
+ 
+Reply, Reply All or Forward | More
+Click to reply all
+

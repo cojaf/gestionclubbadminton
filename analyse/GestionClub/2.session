@@ -1,7 +1,10 @@
-window_sizes 1366 705 320 960 596 35
+window_sizes 1362 705 320 960 596 35
+diagrams
+  active  usecasediagram_ref 128002 // DiaUseCaseClub
+    811 1090 89 4 0 0
+end
 show_stereotypes
-selected 
-package_ref 129 // GestionClub
+selected usecasediagram_ref 128002 // DiaUseCaseClub
 open
   usecase_ref 128002 // Encoder un membre
 end

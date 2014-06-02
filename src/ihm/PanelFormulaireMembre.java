@@ -1,6 +1,9 @@
 package ihm;
 
 import java.awt.Dimension;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.List;
 
 import javax.swing.Box;
 import javax.swing.JLabel;
@@ -37,8 +40,9 @@ public class PanelFormulaireMembre extends JPanel {
 		private JLabel labelCourriel = new JLabel("Courriel");
 		private JLabel labelTelephone = new JLabel("Telephone");
 		private JLabel labelPays = new JLabel("Pays");
-		
 		public PanelFormulaireMembre(){
+			
+
 			super();
 			build();
 		}

@@ -1,11 +1,12 @@
-window_sizes 1280 672 320 960 512 82
+window_sizes 1362 705 159 1197 596 35
 diagrams
   active  classdiagram_ref 128002 // DiaUml
-    759 411 100 4 0 0
+    1075 755 88 3 77 0
 end
 show_stereotypes
-selected attribute_ref 129026 // telephone
+selected class_ref 129794 // TypeCotisation
 open
-  class_ref 136450 // Membre
+  class_ref 128002 // Pays
+  deploymentview_ref 134658 // ClubDeploiement
 end
 end

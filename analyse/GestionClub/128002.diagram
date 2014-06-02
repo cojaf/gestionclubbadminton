@@ -1,84 +1,93 @@
 format 75
 
 subject 128002 ""
-  xyzwh 179 42 2000 410 933
+  xyzwh 173 48 2000 420 984
 classcanvas 128130 class_ref 128002 // Utilisateur
   class_drawing_mode default show_context_mode default show_stereotype_properties default
   xyz 53 159 2000
 end
 usecasecanvas 128258 usecase_ref 128002 // Encoder un membre
-  xyzwh 217 87 3005 64 32 label_xy 201 119
+  xyzwh 210 91 3005 64 32 label_xy 194 123
 end
 usecasecanvas 128386 usecase_ref 128130 // Affilier un membre
-  xyzwh 356 106 3005 64 32 label_xy 344 138
+  xyzwh 349 110 3005 64 32 label_xy 337 142
 end
 usecasecanvas 128642 usecase_ref 128258 // Encoder les salles
-  xyzwh 219 235 3005 64 32 label_xy 207 267
+  xyzwh 212 239 3005 64 32 label_xy 200 271
 end
 usecasecanvas 128898 usecase_ref 128386 // Encoder les horaires
-  xyzwh 358 234 3005 64 32 label_xy 340 266
+  xyzwh 351 238 3005 64 32 label_xy 333 270
 end
 classcanvas 129410 class_ref 128130 // Database
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 677 170 2000
+  xyz 643 172 2000
 end
 usecasecanvas 129538 usecase_ref 128514 // Modifier un classement
-  xyzwh 496 106 3005 64 32 label_xy 473 138
+  xyzwh 489 110 3005 64 32 label_xy 466 142
 end
 usecasecanvas 129794 usecase_ref 128642 // Modifier les données d un membre
-  xyzwh 356 48 3011 64 32 label_xy 306 80
+  xyzwh 349 52 3011 64 32 label_xy 299 84
 end
 usecasecanvas 130050 usecase_ref 128770 // Modifier les horaires
-  xyzwh 497 237 3005 64 32 label_xy 480 269
+  xyzwh 490 241 3005 64 32 label_xy 473 273
 end
 usecasecanvas 130306 usecase_ref 128898 // Lister les membres
-  xyzwh 215 173 3005 64 32 label_xy 202 205
+  xyzwh 208 177 3005 64 32 label_xy 195 209
 end
 usecasecanvas 130562 usecase_ref 129026 // Lister les membres par saison
-  xyzwh 362 174 3011 64 32 label_xy 322 206
+  xyzwh 355 178 3011 64 32 label_xy 315 210
 end
 usecasecanvas 130818 usecase_ref 129154 // Encoder une competition
-  xyzwh 277 317 3005 64 32 label_xy 250 349
+  xyzwh 270 321 3005 64 32 label_xy 243 353
 end
 usecasecanvas 130946 usecase_ref 129282 // Encoder un interclub
-  xyzwh 219 425 3005 64 32 label_xy 202 457
+  xyzwh 212 429 3005 64 32 label_xy 195 461
 end
 usecasecanvas 131202 usecase_ref 129410 // Encoder un match de coupe
-  xyzwh 321 399 3005 64 32 label_xy 286 431
+  xyzwh 314 403 3005 64 32 label_xy 279 435
 end
 usecasecanvas 131586 usecase_ref 129538 // Modifier le statut d un match
-  xyzwh 428 318 3005 64 32 label_xy 393 350
+  xyzwh 421 322 3005 64 32 label_xy 386 354
 end
 usecasecanvas 131842 usecase_ref 129666 // Lister les competitions
-  xyzwh 227 504 3005 64 32 label_xy 206 536
+  xyzwh 220 508 3005 64 32 label_xy 199 540
 end
 usecasecanvas 131970 usecase_ref 129794 // Lister les interclubs
-  xyzwh 354 485 3005 64 32 label_xy 339 517
+  xyzwh 347 489 3005 64 32 label_xy 332 521
 end
 usecasecanvas 132098 usecase_ref 129922 // Lister les matchs de coupe
-  xyzwh 350 545 3005 64 32 label_xy 317 577
+  xyzwh 343 549 3005 64 32 label_xy 310 581
 end
 usecasecanvas 132610 usecase_ref 130050 // Encoder une transaction
-  xyzwh 225 620 3005 64 32 label_xy 198 652
+  xyzwh 218 624 3005 64 32 label_xy 191 656
 end
 usecasecanvas 132738 usecase_ref 130178 // Encoder une recette
-  xyzwh 376 625 3005 64 32 label_xy 359 657
+  xyzwh 369 629 3005 64 32 label_xy 352 661
 end
 usecasecanvas 132866 usecase_ref 130306 // Encoder une depense
-  xyzwh 371 693 3005 64 32 label_xy 350 725
+  xyzwh 364 697 3005 64 32 label_xy 343 729
 end
 usecasecanvas 133890 usecase_ref 130434 // Lister les transactions
-  xyzwh 211 761 3005 64 32 label_xy 190 793
+  xyzwh 204 765 3005 64 32 label_xy 183 797
 end
 usecasecanvas 134018 usecase_ref 130562 // Lister les recettes
-  xyzwh 346 768 3005 64 32 label_xy 335 800
+  xyzwh 339 772 3005 64 32 label_xy 328 804
 end
 usecasecanvas 134146 usecase_ref 130690 // Lister les depenses
-  xyzwh 348 833 3005 64 32 label_xy 333 865
+  xyzwh 341 837 3005 64 32 label_xy 326 869
 end
 usecasecanvas 134530 usecase_ref 130818 // Donner le bilan d une saison
-  xyzwh 471 803 3005 64 32 label_xy 435 835
+  xyzwh 464 807 3005 64 32 label_xy 428 839
 end
+usecasecanvas 135042 usecase_ref 137346 // Encoder les stages
+  xyzwh 211 895 3005 64 32 label_xy 197 927
+end
+usecasecanvas 135170 usecase_ref 137474 // Encoder les entraineurs
+  xyzwh 208 962 3005 64 32 label_xy 183 994
+end
+note 135554 "Toutes les actions interrogent la database
+"
+  xyzwh 631 254 2000 149 59
 simplerelationcanvas 128514 simplerelation_ref 128002
   from ref 128258 z 3006 to ref 128386
 end
@@ -96,7 +105,7 @@ simplerelationcanvas 129922 simplerelation_ref 128386
   from ref 128258 z 3012 to ref 129794
 end
 simplerelationcanvas 130178 simplerelation_ref 128514
-  decenter_begin 561
+  decenter_begin 560
   from ref 128898 z 3006 to ref 130050
 end
 line 130434 ----
@@ -132,10 +141,10 @@ end
 line 133250 ----
   from ref 128130 z 3006 to ref 132610
 line 133378 ----
-  from ref 128386 z 3006 to point 581 223
+  from ref 128386 z 3006 to point 574 227
   line 133506 z 3006 to ref 132738
 line 133634 ----
-  from ref 130818 z 3006 to point 560 393
+  from ref 130818 z 3006 to point 553 397
   line 133762 z 3006 to ref 132866
 simplerelationcanvas 134274 simplerelation_ref 129666
   from ref 134018 z 3006 to ref 133890
@@ -151,4 +160,8 @@ simplerelationcanvas 134786 simplerelation_ref 130050
 end
 line 134914 ----
   from ref 133890 z 3006 to ref 128130
+line 135298 ----
+  from ref 135042 z 3006 to ref 128130
+line 135426 ----
+  from ref 135170 z 3006 to ref 128130
 end
